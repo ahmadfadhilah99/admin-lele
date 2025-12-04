@@ -31,16 +31,19 @@ export default function LaporanTables() {
         <!-- Container utama untuk print -->
         <div style="font-family: Arial, sans-serif; max-width: 210mm; margin: 0 auto; padding: 20px;">
           <!-- Kop Surat -->
-          <div style="text-align: center; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 20px;">
+          <div style="text-align: center; margin-bottom: 20px; border-bottom: 2px solid 
+          #000; padding-bottom: 20px;">
             <div style="font-size: 24px; font-weight: bold; margin-bottom: 10px;">
               MayFarm
             </div>
-            <div style="font-size: 18px; font-weight: bold; margin-top: 15px;">Laporan Produksi dan Penjualan</div>
+            <div style="font-size: 18px; font-weight: bold; margin-top: 15px;">Laporan 
+            Produksi dan Penjualan</div>
           </div>
                     
           <!-- Tanggal Cetak -->
           <div style="margin-bottom: 20px; text-align: left;">
-            <p><strong>Tanggal Cetak:</strong> ${new Date().toLocaleDateString('id-ID', {
+            <p><strong>Tanggal Cetak:</strong> ${new Date().toLocaleDateString('id-ID',
+            {
               day: '2-digit',
               month: 'long',
               year: 'numeric',
@@ -118,7 +121,8 @@ export default function LaporanTables() {
             <div className="text-gray-500 text-sm">Memuat data...</div>
           )}
           {isError && (
-            <div className="text-red-500 text-sm">{(error as any)?.message || 'Gagal memuat data'}</div>
+            <div className="text-red-500 text-sm">{(error as any)?.message || 
+              'Gagal memuat data'}</div>
           )}
           {!isLoading && !isError && items.length === 0 && (
             <div className="text-gray-500 text-sm">Tidak ada data.</div>
